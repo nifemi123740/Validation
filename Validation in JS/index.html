@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDATION</title>
+</head>
+<body>
+    <h1>Validation in JS</h1>
+    <div>
+       <form name="myform" onsubmit="ValidateForm()">
+          <fieldset>
+              <legend>Register</legend>
+              Name:<input type="text" placeholder="Enter Name" name="fname"><br>
+              Age: <input type="number" placeholder="Enter Age"><br>
+              <input type="submit" value="submit">
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        function ValidateForm(){
+            var x=document.forms["myform"]["fname"].value;
+            if(x==""){
+                alert("Name must be filled out!!");
+                return false
+            }
+        }
+    </script>
+</body>
+</html>
